@@ -4,6 +4,7 @@
 #include "math.h"
 #include "stdio.h"
 #include "stm32f4xx_usart.h"
+#include "serial.h"
 
 // Macro to use CCM (Core Coupled Memory) in STM32F4
 #define CCM_RAM __attribute__((section(".ccmram")))
@@ -21,6 +22,7 @@ int main(void) {
 	SystemInit();
 	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4);
 	init_USART3();
+	serial_init();
 
 	// Create a task
 	// Stack and TCB are placed in CCM of STM32F4
