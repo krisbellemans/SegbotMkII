@@ -146,3 +146,7 @@ clean:
 
 flash:
 	@st-flash write $(BIN_DIR)/$(TARGET).bin 0x8000000
+
+tags:
+	@ctags -R --c-kinds=+pxfd --fields=+iaS --extra=+q .
+	@cscope -Rb

@@ -22,3 +22,5 @@
 
 .DS_Store
 *.swp
+tags
+cscope.out
