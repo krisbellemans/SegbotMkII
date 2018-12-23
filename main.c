@@ -7,7 +7,6 @@
 #include "stm32f4xx_gpio.h"
 #include "stm32f4xx_rcc.h"
 #include "misc.h"
-#include "serial.h"
 #include "uart.h"
 
 // Macro to use CCM (Core Coupled Memory) in STM32F4
@@ -23,7 +22,6 @@ void test_FPU_test(void* p);
 int main(void)
 {
     SystemInit();
-    serial_init();
     uart_init(115200u, USART_Parity_No, USART_StopBits_1, USART_WordLength_8b);
     NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4);
 

@@ -49,7 +49,6 @@ SRC+=timers.c
 SRC+=heap_4.c
 
 # Hardware Abstraction layer
-SRC+=serial.c
 SRC+=uart.c
 
 # Standard Peripheral Source Files
